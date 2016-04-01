@@ -4,6 +4,11 @@
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+    .bgimg {
+      background-image: url("img/pingbackground.jpg");
+    }
+    </style>
     <script src="js/jquery-1.12.2.js"></script>
     <script src="js/scripts.js"></script>
 
@@ -11,31 +16,60 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="container">
-        <form>
+    <div class="container-fluid">
 
-          <div class="form-group">
-            <label for="userInput">Enter a whole number to generate your ping-pong list:</label>
-            <input id="userInput" class="form-control" type="text">
-          </div>
-
-          <button type="submit" class="btn" id="submit">Submit</button>
-        </form>
-        <form id="resetForm">
-            <button type="submit" class="btn" id="reset">Clear Results</button>
-        </form>
+      <div class="row hero bgimg">
+        <h1>PING PONG</h1>
       </div>
 
-      <div class="container">
-          <h2>Your Ping Pong List:</h2>
-          <ul id="pingPongList">
-          </ul>
+      <div class="row">
+        <div class="col-sm-4 sideBar">
+          <div class="stats">
+            <h3>ASSIGNMENT</h3>
+            <p>Epicodus Week 3 Code Review</p>
+          </div>
+          <div class="stats">
+            <h3>LANGUAGES/FRAMEWORKS</h3>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>Bootstrap</li>
+          </div>
+        </div>
+          <div>
+        </div>
+
+        <div class="col-sm-8 pingPongResults">
+          <form>
+            <p>Ping Pong will count up to your number from 1, with the following exceptions:</p>
+            <ol>
+              <li>Numbers divisible by 3 become PING</li>
+              <li>Numbers divisible by 5 become PONG</li>
+              <li>Numbers divisible by 15 become PINGPONG</li>
+            </ol>
+            <div class="form-group">
+              <label for="userInput">Enter a whole number to generate your ping-pong list:</label>
+              <input id="userInput" class="form-control" type="text">
+            </div>
+
+            <button type="submit" class="btn btn-lg " id="submit">Submit</button>
+          </form>
+          <form id="resetForm">
+              <button type="submit" class="btn btn-lg" id="reset">Clear Results</button>
+          </form>
 
 
+        <div class="result">
+            <h2>Your Ping Pong List:</h2>
+            <ul id="pingPongList">
+            </ul>
 
 
-    </div>
+          </div>
+        </div>
+
+    </div> <!-- ends the 8 col row div -->
+  </div> <!-- ends the entire page div -->
 
 
   </body>

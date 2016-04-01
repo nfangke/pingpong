@@ -1,7 +1,120 @@
-#pingPongList {
+/*Form button states*/
+.result {
   display: none;
 }
 
 #resetForm {
   display: none;
+}
+
+
+/*styling the first section*/
+.hero {
+  text-align: center;
+  min-height: 500px;
+  padding-top: 180px;
+  border-radius: 0px !important;
+  margin-bottom: none !important;
+}
+
+.hero h1 {
+  color: #B9D7D9;
+  background: #BAAE9E;
+  margin-top: 50px;
+  padding-left: 25px;
+  font-size: 8em;
+  font-weight: 600;
+  display: inline;
+  float: center;
+  padding-right: 25px;
+  clear: both;
+}
+
+
+/*styling the left rail*/
+.sideBar {
+  padding-top: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #668284;
+  min-height: 3000px
+}
+
+.sideBar img {
+  max-width: 100%;
+  position: auto;
+}
+
+.sideBar h3 {
+  font-size: 1em;
+  font-weight: bolder;
+}
+
+.sideBar p {
+  font-size: 1.25em;
+  font-weight: 200;
+  padding-bottom: 20px;
+}
+
+.sideBar li {
+  font-size: 1.25em;
+  font-weight: 200;
+  list-style-position: outside;
+  list-style: none;
+  padding-bottom: 10px;
+}
+
+
+/*styling the right column*/
+.pingPongResults {
+  padding: 40px;
+  background-color: #B9D7D9;
+  min-height: 3000px;
+}
+
+
+.form-group {
+  max-width: 75%;
+}
+
+label {
+  font-size: 1.25em;
+  padding-bottom: 10px;
+}
+
+input {
+  height: 50px !important;
+}
+
+form p {
+  font-size: 2em;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+
+ol {
+  padding-bottom: 30px;
+}
+
+ol li {
+  list-style-position: outside;
+  font-size:1.25em;
+  line-height: 2em;
+}
+
+/*styling the result*/
+
+ul {
+  padding-top: 30px;
+}
+
+ul li {
+  list-style-position: outside;
+  font-size:1.5em;
+  line-height: 2em;
+}
+
+h2 {
+  padding-top: 50px;
+  font-size: 2em;
 }

@@ -21,11 +21,11 @@ var countInput = function(userInput) {
   // Replaces array items into the list
   userInputArray.forEach(function(list) {
     if (list % 15 === 0) {
-      $("ul").append("<li>" + "Ping Pong" + "</li>");
+      $("ul").append("<li>" + "PINGPONG" + "</li>");
     } else if (list % 5 === 0) {
-      $("ul").append("<li>" + "Pong" + "</li>");
+      $("ul").append("<li>" + "PONG" + "</li>");
     } else if (list % 3 === 0) {
-      $("ul").append("<li>" + "Ping" + "</li>");
+      $("ul").append("<li>" + "PING" + "</li>");
     } else {
       $("ul").append("<li>" + list + "</li>");
     }
@@ -51,15 +51,12 @@ $(document).ready(function(){
     } else {
 
       countInput(userInput);
-      $("ul").show(this);
+      $(".result").show(this);
     }
-
-
   });
 
   $("#resetForm").submit(function() {
     window.location.reload();
-
   });
 
 });
