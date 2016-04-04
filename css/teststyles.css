@@ -3,10 +3,6 @@
   display: none;
 }
 
-#resetForm {
-  display: none;
-}
-
 
 /*styling the first section*/
 .hero {
@@ -67,7 +63,7 @@
 a {
   font-size: 1.25em;
   color: #B9D7D9;
-  font-weight: 200;  
+  font-weight: 200;
 }
 
 
