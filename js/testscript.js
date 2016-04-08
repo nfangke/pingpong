@@ -1,9 +1,7 @@
 // BUSINESS LOGIC
 var userInput;
 
-var replaceValArray = [];
-
-// determine if input is valid
+// Determines if input is valid
 var ifNumber = function(userInput) {
   if (userInput === NaN || userInput < 0 || userInput % 1 !==0) {
   return false;
@@ -13,28 +11,31 @@ var ifNumber = function(userInput) {
 
 // Creates a new array from 1 to n
 var countInput = function(userInput) {
-
   var userInputArray = [];
 
-  for (i = 1; i < userInput + 1; i++) {
+  for (i = 1; i < userInput +1; i++) {
     userInputArray.push(i);
+
   }
 
-  // Replaces array items into the list
-  userInputArray.forEach(function(list) {
-    if (list % 15 === 0) {
-      $("ul").append("<li>" + "PINGPONG" + "</li>");
-    } else if (list % 5 === 0) {
-      $("ul").append("<li>" + "PONG" + "</li>");
-    } else if (list % 3 === 0) {
-      $("ul").append("<li>" + "PING" + "</li>");
+// Creates a new array from 1 to n
+  for (j = 0; j < userInputArray.length; j++) {
+  	if (userInputArray[j] % 15 === 0) {
+    	listArray.push("PINGPONG");
+    } else if (userInputArray[j] % 5 === 0) {
+    	listArray.push("PONG");
+    } else if (userInputArray[j] % 3 === 0) {
+    	listArray.push("PING");
     } else {
-      $("ul").append("<li>" + list + "</li>");
+    	listArray.push(userInputArray[j]);
     }
 
-  });
-};
+  }
 
+
+  };
+
+  var listArray = [];
 
 // UI Logic
 $(document).ready(function(){
@@ -54,7 +55,12 @@ $(document).ready(function(){
 
       countInput(userInput);
 
+      listArray.forEach(function(listItem) {
+        $("ul").append("<li>" + listItem + "</li>");
+      });
+
       $(".result").show();
+      listArray = [];
     }
   });
 
