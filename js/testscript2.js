@@ -12,40 +12,34 @@ var ifNumber = function(userInput) {
 // Creates a new array from 1 to n
 var countInput = function(userInput) {
   var userInputArray = [];
-
+  var lArray = [];
   for (i = 1; i < userInput +1; i++) {
     userInputArray.push(i);
+   }
+   console.log(userInputArray);
 
-  }
+    userInputArray.forEach(function(itemNum) {
 
-// Creates a new array from 1 to n
-  for (j = 0; j < userInputArray.length; j++) {
-    var listArray = [];
-  	if (userInputArray[j] % 15 === 0) {
-    	listArray.push("PINGPONG");
-    } else if (userInputArray[j] % 5 === 0) {
-    	listArray.push("PONG");
-    } else if (userInputArray[j] % 3 === 0) {
-    	listArray.push("PING");
-    } else {
-    	listArray.push(userInputArray[j]);
-    }
-    return listArray
-    console.log(listArray);
-
-  }
-
-
-  }
-
+    	if (itemNum % 15 === 0) {
+      	lArray.push("PINGPONG");
+      } else if (itemNum % 5 === 0) {
+      	lArray.push("PONG");
+      } else if (itemNum % 3 === 0) {
+      	lArray.push("PING");
+      } else {
+      	lArray.push(itemNum);
+      }
+      return lArray
+      console.log(lArray)
+  });
+};
 
 
 // UI Logic
-$(document).ready(function(){
+$(document).ready(function() {
   // removeList();
-  $("form").submit(function(event){
+  $("form").submit(function(event) {
     event.preventDefault();
-
     $("ul#pingPongList").empty();
 
     userInput = parseInt($("#userInput").val());
@@ -58,7 +52,7 @@ $(document).ready(function(){
 
       countInput(userInput);
 
-      listArray.forEach(function(listItem) {
+      lArray.forEach(function(listItem) {
         $("ul").append("<li>" + listItem + "</li>");
       });
 
@@ -66,5 +60,4 @@ $(document).ready(function(){
       // listArray = [];
     }
   });
-
 });
